@@ -1,14 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "http", // Change to http
-        hostname: "localhost",
-        port: "1337",
-        pathname: "/uploads/**",
-      },
-    ],
+    domains: ["brilliant-event-ccd87fec16.media.strapiapp.com"], // Add the domain serving your images
   },
 };
 
