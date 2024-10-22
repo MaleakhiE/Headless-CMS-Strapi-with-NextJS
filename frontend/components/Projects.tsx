@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../lib/fetchData"; // Adjust the path as necessary
-import { strapiImage } from "../lib/strapiImage"; // If needed for additional URL formatting
 
 const Projects: React.FC<{}> = () => {
   const [projects, setProjects] = useState<
@@ -24,6 +23,11 @@ const Projects: React.FC<{}> = () => {
         const projectsData = data.data.map((project: any) => {
           const projectDetails = project.Project[0]; // Extract the first project details
 
+          // Extract image URL and ensure to use 'thumbnail' if available
+          const imageURL = projectDetails?.imageURL?.formats?.thumbnail?.url
+            ? projectDetails.imageURL.formats.thumbnail.url
+            : projectDetails?.imageURL?.url || "";
+
           return {
             id: project.id,
             title: projectDetails?.title || "",
@@ -32,7 +36,7 @@ const Projects: React.FC<{}> = () => {
               href: projectDetails?.link || "#",
               isExternal: projectDetails?.isExternal || false,
             },
-            imageUrl: projectDetails?.imageURL?.url || "", // Correctly handle the imageURL path
+            imageUrl: imageURL, // Use the thumbnail version or the full image URL
           };
         });
         setProjects(projectsData);
