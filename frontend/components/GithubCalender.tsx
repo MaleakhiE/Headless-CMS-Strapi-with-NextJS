@@ -11,7 +11,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     setGithubData({
-      title: "MY CONTRIBUTIONS", // Title for the section
+      title: "GITHUB", // Title for the section
       childTitle: "EXPLORE NOW", // Subtitle
       username: "maleakhie", // GitHub username for calendar
     });
