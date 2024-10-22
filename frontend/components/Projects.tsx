@@ -16,7 +16,7 @@ const Projects: React.FC<{}> = () => {
   >([]);
 
   useEffect(() => {
-    const query = "/api/projects?populate=Project.imageURL"; // Simplified query to fetch all necessary data
+    const query = "/api/projects?populate=Project.imageURL"; // Query to fetch all necessary data
 
     fetchData(query).then((data) => {
       if (data && data.data) {
@@ -71,6 +71,7 @@ const Projects: React.FC<{}> = () => {
                           alt={project.title}
                           width={150}
                           height={150}
+                          loading="lazy"
                         />
                       ) : (
                         <p>No image available</p>
