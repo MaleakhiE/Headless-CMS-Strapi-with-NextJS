@@ -1,0 +1,5 @@
+.react-activity-calendar__legend-month,
+.react-activity-calendar__count,
+.react-activity-calendar__legend-colors {
+  color: white !important; /* Ensures that the text color is white */
+}
