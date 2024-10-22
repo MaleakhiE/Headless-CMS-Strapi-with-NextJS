@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../lib/fetchData"; // Adjust the path as necessary
-import { strapiImage } from "../lib/strapiImage"; // Utility to get full image URL from Strapi
 
 // Define types for the logo and button data
 interface LogoData {
@@ -61,7 +60,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <a href="/" className="h-auto w-auto flex flex-row items-center">
           <Image
-            src={strapiImage(logoData.url)} // Use strapiImage utility to construct the full image URL
+            src={logoData.url} // Use strapiImage utility to construct the full image URL
             alt={logoData.alternativeText || "Logo"}
             width={100}
             height={100}
