@@ -62,7 +62,7 @@ const Banner: React.FC<{}> = () => {
         <div className="justify-center flex">
           <Image
             priority
-            src={strapiImage(photoData.url)} // Use strapiImage to construct full URL
+            src={photoData.url} // Use strapiImage to construct full URL
             height={300}
             width={300}
             alt={photoData.alternativeText}
