@@ -48,13 +48,13 @@ const Experience: React.FC<{}> = () => {
 
         {/* Description */}
         <p
-          className="text-gray-300 pt-5"
+          className="text-gray-300 pt-4"
           style={{ textAlign: "justify" }}
           dangerouslySetInnerHTML={{ __html: experienceData.description }}
         />
 
         {/* Skills */}
-        <div className="flex-col flex sm:flex-row">
+        <div className="flex-col flex sm:flex-row sm:flex-wrap">
           {experienceData.skillTitle
             .split(", ")
             .map((skill: string, index: number) => (
