@@ -32,7 +32,7 @@ const Projects: React.FC<{}> = () => {
               href: projectDetails?.link || "#",
               isExternal: projectDetails?.isExternal || false,
             },
-            imageUrl: strapiImage(projectDetails?.image?.url || ""), // Use strapiImage to format the image URL
+            imageUrl: projectDetails?.image?.url || "", // Use strapiImage to format the image URL
           };
         });
         setProjects(projectsData);
