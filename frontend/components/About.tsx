@@ -35,8 +35,10 @@ const About: React.FC<{}> = () => {
 
   return (
     <section id="about">
-      <h1 className="text-white font-semibold text-6xl">{aboutData.title}</h1>
-      <p className="tracking-[0.5em] text-transparent font-light pb-5 bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500 text-1xl">
+      <h1 className="text-white font-semibold text-center text-6xl pt-[35px]">
+        {aboutData.title}
+      </h1>
+      <p className="tracking-[0.5em] text-center text-transparent font-light pb-5 bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500 text-1xl">
         {aboutData.childTitle}
       </p>
       <div className="container mx-auto 2xl">

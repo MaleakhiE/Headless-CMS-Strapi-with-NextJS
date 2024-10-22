@@ -79,7 +79,10 @@ const Banner: React.FC<{}> = () => {
         </p>
 
         {/* Description */}
-        <p className="text-md text-gray-200 my-5 max-w-[600px]">
+        <p
+          className="text-md text-gray-200 my-5 max-w-[600px]"
+          style={{ textAlign: "justify" }}
+        >
           {bannerData.description}
         </p>
 
