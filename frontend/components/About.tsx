@@ -34,15 +34,12 @@ const About: React.FC<{}> = () => {
   }
 
   return (
-    <section
-      id="about"
-      className="flex flex-col items-center justify-center h-full relative overflow-hidden pt-[35px]"
-    >
-      <div className="flex flex-col justify-around flex-wrap items-center max-w-[900px]">
-        <h1 className="text-white font-semibold text-6xl">{aboutData.title}</h1>
-        <p className="tracking-[0.5em] text-transparent font-light pb-5 bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500 text-1xl">
-          {aboutData.childTitle}
-        </p>
+    <section id="about">
+      <h1 className="text-white font-semibold text-6xl">{aboutData.title}</h1>
+      <p className="tracking-[0.5em] text-transparent font-light pb-5 bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500 text-1xl">
+        {aboutData.childTitle}
+      </p>
+      <div className="container mx-auto 2xl">
         <p
           className="text-gray-300 size-1/2 text-lg"
           style={{ textAlign: "justify" }}
