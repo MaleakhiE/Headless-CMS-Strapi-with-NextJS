@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { fetchData } from "../lib/fetchData"; // Adjust the path as necessary
-import { strapiImage } from "../lib/strapiImage"; // Use strapiImage to get full image URLs
 
 const Banner: React.FC<{}> = () => {
   const [bannerData, setBannerData] = useState<{
@@ -60,9 +59,8 @@ const Banner: React.FC<{}> = () => {
       <div className="flex flex-col justify-center text-center">
         {/* Profile Photo */}
         <div className="justify-center flex">
-          <Image
-            priority
-            src={photoData.url} // Use strapiImage to construct full URL
+          <img
+            src={photoData.url} // Directly use the Strapi URL
             height={300}
             width={300}
             alt={photoData.alternativeText}
