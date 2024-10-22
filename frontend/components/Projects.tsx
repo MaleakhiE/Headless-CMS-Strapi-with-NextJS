@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../lib/fetchData"; // Adjust the path as necessary
-import { strapiImage } from "../lib/strapiImage";
+import { strapiImage } from "../lib/strapiImage"; // If needed for additional URL formatting
 
 const Projects: React.FC<{}> = () => {
   const [projects, setProjects] = useState<
@@ -11,7 +11,7 @@ const Projects: React.FC<{}> = () => {
       id: number;
       title: string;
       description: string;
-      link: { href: string; text: string };
+      link: { href: string; isExternal: boolean };
       imageUrl: string;
     }>
   >([]);
@@ -32,7 +32,7 @@ const Projects: React.FC<{}> = () => {
               href: projectDetails?.link || "#",
               isExternal: projectDetails?.isExternal || false,
             },
-            imageUrl: projectDetails?.image?.url || "", // Use strapiImage to format the image URL
+            imageUrl: projectDetails?.imageURL?.url || "", // Correctly handle the imageURL path
           };
         });
         setProjects(projectsData);
@@ -55,20 +55,24 @@ const Projects: React.FC<{}> = () => {
               <div key={project.id} className="w-full md:w-1/2 lg:w-1/4 p-4">
                 <a
                   href={project.link.href}
-                  target="_blank"
+                  target={project.link.isExternal ? "_blank" : "_self"}
                   rel="noopener noreferrer"
                   className="z-[1]"
                 >
                   <div className="flex flex-col items-center">
                     <div className="p-3 text-center">
-                      <Image
-                        src={project.imageUrl}
-                        alt={project.title}
-                        width={150}
-                        height={150}
-                      />
+                      {project.imageUrl ? (
+                        <Image
+                          src={project.imageUrl}
+                          alt={project.title}
+                          width={150}
+                          height={150}
+                        />
+                      ) : (
+                        <p>No image available</p>
+                      )}
                       <p className="text-white font-semibold text-xl">
-                        {project.imageUrl}
+                        {project.title}
                       </p>
                       <p className="text-gray-500 text-[10px]">
                         {project.description}
