@@ -44,7 +44,7 @@ const About: React.FC<{}> = () => {
           {aboutData.childTitle}
         </p>
         <p
-          className="text-gray-300 text-center"
+          className="text-gray-300 text-justify size-1/2 text-lg"
           dangerouslySetInnerHTML={{ __html: aboutData.description }}
         ></p>
       </div>
