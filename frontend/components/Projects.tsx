@@ -61,6 +61,12 @@ const Projects: React.FC<{}> = () => {
                 >
                   <div className="flex flex-col items-center">
                     <div className="p-3 text-center">
+                      <Image
+                        src={project.imageUrl}
+                        alt={project.title}
+                        width={150}
+                        height={150}
+                      />
                       <p className="text-white font-semibold text-xl">
                         {project.title}
                       </p>
