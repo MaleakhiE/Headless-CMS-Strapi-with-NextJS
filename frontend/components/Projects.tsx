@@ -68,7 +68,7 @@ const Projects: React.FC<{}> = () => {
                         height={150}
                       />
                       <p className="text-white font-semibold text-xl">
-                        {project.title}
+                        {project.imageUrl}
                       </p>
                       <p className="text-gray-500 text-[10px]">
                         {project.description}
