@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_structure_layouts",
+  "info": {
+    "displayName": "Layout",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "menu": {
+      "type": "string"
+    },
+    "Position": {
+      "type": "integer",
+      "unique": true,
+      "max": 7
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "kind": "collectionType",
+    "collectionName": "layouts",
+    "info": {
+        "singularName": "layout",
+        "pluralName": "layouts",
+        "displayName": "Layout",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Layout": {
+            "type": "component",
+            "repeatable": true,
+            "component": "structure.layout"
+        }
+    }
+}

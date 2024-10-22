@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_navbar_buttons",
+    "info": {
+        "displayName": "Button"
+    },
+    "options": {},
+    "attributes": {
+        "logoLink": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "isExternal": {
+            "type": "boolean"
+        }
+    }
+}

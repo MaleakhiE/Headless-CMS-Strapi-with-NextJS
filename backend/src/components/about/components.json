@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_components",
+  "info": {
+    "displayName": "Components"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "childTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

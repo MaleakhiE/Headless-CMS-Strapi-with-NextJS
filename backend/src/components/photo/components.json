@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_photo_components",
+  "info": {
+    "displayName": "Components"
+  },
+  "options": {},
+  "attributes": {
+    "imageUrl": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_navbar_components",
+  "info": {
+    "displayName": "Components"
+  },
+  "options": {},
+  "attributes": {
+    "logoWeb": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

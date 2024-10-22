@@ -1,0 +1,28 @@
+{
+    "collectionName": "components_banner_components",
+    "info": {
+        "displayName": "Components",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "childTitle": {
+            "type": "string"
+        },
+        "description": {
+            "type": "richtext"
+        },
+        "buttonName": {
+            "type": "string"
+        },
+        "link": {
+            "type": "string"
+        },
+        "isExternal": {
+            "type": "boolean"
+        }
+    }
+}

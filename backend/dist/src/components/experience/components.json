@@ -1,0 +1,28 @@
+{
+    "collectionName": "components_experience_components",
+    "info": {
+        "displayName": "Components",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "childTitle": {
+            "type": "string"
+        },
+        "jobTitle": {
+            "type": "string"
+        },
+        "jobDates": {
+            "type": "string"
+        },
+        "description": {
+            "type": "richtext"
+        },
+        "skillTitle": {
+            "type": "text"
+        }
+    }
+}
