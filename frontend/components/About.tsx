@@ -44,7 +44,8 @@ const About: React.FC<{}> = () => {
           {aboutData.childTitle}
         </p>
         <p
-          className="text-gray-300 text-justify size-1/2 text-lg"
+          className="text-gray-300 size-1/2 text-lg"
+          style={{ textAlign: "justify" }}
           dangerouslySetInnerHTML={{ __html: aboutData.description }}
         ></p>
       </div>
