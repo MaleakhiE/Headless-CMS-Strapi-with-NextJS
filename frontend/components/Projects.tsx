@@ -17,7 +17,7 @@ const Projects: React.FC<{}> = () => {
   >([]);
 
   useEffect(() => {
-    const query = "/api/projects?populate=*"; // Simplified query to fetch all necessary data
+    const query = "/api/projects?populate=Project.imageURL"; // Simplified query to fetch all necessary data
 
     fetchData(query).then((data) => {
       if (data && data.data) {
