@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:1337"; // Update this if your Strapi instance has a different URL
+const BASE_URL = "https://loving-horse-4e6d5ec2f4.strapiapp.com"; // Update this if your Strapi instance has a different URL
 
 export const strapiImage = (relativeUrl: string) => {
   if (!relativeUrl) return ""; // Handle case when no URL is provided
